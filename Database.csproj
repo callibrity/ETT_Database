@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DbUp" Version="4.4.0" />
+    <!-- <EmbeddedResource Include="Scripts\dropTables_all.sql" /> -->
+    <PackageReference Include="dbup-postgresql" Version="4.4.0" />
+  </ItemGroup>
+</Project>
