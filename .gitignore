@@ -4,8 +4,6 @@ project.lock.json
 .DS_Store
 *.pyc
 
-# Visual Studio Code
-.vscode
 
 # User-specific files
 *.suo
@@ -29,6 +27,5 @@ msbuild.err
 msbuild.wrn
 
 # Visual Studio 2015
-.vs/
 
 ./SecretScripts

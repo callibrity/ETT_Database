@@ -11,7 +11,7 @@ namespace Database
         {
             var connectionString =
                 args.FirstOrDefault()
-                ?? "Host=localhost;User Id=postgres;Password=mysecretpassword;Database=test_database_local;Port=5432";
+                ?? "Host=localhost;User Id=postgres;Password=mysecretpassword;Database=test_database;Port=5432";
             EnsureDatabase.For.PostgresqlDatabase(connectionString); // Creates database if it does not exist
 
             // Execute all the scripts listed as Embedded resources in the .csproj folder
