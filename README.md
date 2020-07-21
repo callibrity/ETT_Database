@@ -1,7 +1,7 @@
 # ETT_Database
 DbUp database migration
 
-##Using a docker container as the postgres db:
+## Using a docker container as the postgres db:
 https://hub.docker.com/_/postgres/
 
 In terminal, run: 
@@ -28,16 +28,3 @@ To use this DB in the API, in the API appsettings.json, alter the connection str
   "Connection": "Host=localhost;Username=postgres;Password=mysecretpassword;Database=test_database"
 }
 ```
-
-
-1. Spin up local db - Container or localhost Postgres
-
-2. Clone Database repo
-
-3. Alter connection string in Program.cs to point to local DB
-
-4. Run console program
-
-5. Will execute all scripts in the Scripts/ folder
-
-6. Alter connection string in ETT_Backend appsettings.json to local db
