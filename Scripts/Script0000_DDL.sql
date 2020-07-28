@@ -50,9 +50,10 @@ CREATE TABLE public.ett_employee_metrics (
 	total_yearly_pto float8 NULL,
 	overflow_pto float8 NULL,
 	used_pto float8 NULL,
-	the_year int4 NOT NULL,
+	the_year int4 NULL,
 	billable_target_to_date float8 NULL,
-	CONSTRAINT ett_employee_metrics_pk PRIMARY KEY (employee_number_fk, the_year)
+	week_ending_date date NOT NULL,
+	CONSTRAINT ett_employee_metrics_pk PRIMARY KEY (employee_number_fk, week_ending_date)
 );
 
 
