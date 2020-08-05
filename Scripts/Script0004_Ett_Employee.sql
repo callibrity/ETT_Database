@@ -4,4 +4,5 @@ INSERT INTO public.ett_employee (first_name,last_name,employee_number,employee_e
 ,('Arielle','Ferre','123123','arielle.ferre@callibrity.com')
 ,('Collin','Johnson','99999','collin.johnson@callibrity.com')
 ,('Connor','Mason','0919','cmason@callibrity.com')
+,('Jordan','Otrembiak','474747','jordan.otrembiak@callibrity.com')
 ;

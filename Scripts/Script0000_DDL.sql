@@ -1,3 +1,13 @@
+SELECT timezone('America/New_York','2019-12-31 00:00'::TIMESTAMPTZ);
+
+CREATE OR REPLACE FUNCTION trigger_set_timestamp()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.updated_at = NOW();
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
 -- public.employees definition
 
 -- Drop table
@@ -52,8 +62,14 @@ CREATE TABLE public.ett_employee_metrics (
 	used_pto float8 NULL,
 	the_year int4 NOT NULL,
 	billable_target_to_date float8 NULL,
+	updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
 	CONSTRAINT ett_employee_metrics_pk PRIMARY KEY (employee_number_fk, the_year)
 );
+
+CREATE TRIGGER set_timestamp
+BEFORE UPDATE ON public.ett_employee_metrics
+FOR EACH ROW
+EXECUTE FUNCTION trigger_set_timestamp();
 
 
 -- public.ett_hours_source definition
