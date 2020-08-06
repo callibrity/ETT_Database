@@ -1,0 +1,2 @@
+ALTER TABLE ett_employee 
+ADD COLUMN Role VARCHAR(200) NOT NULL DEFAULT 'Developer'
