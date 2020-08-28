@@ -29,3 +29,17 @@ dotnet run
   "Connection": "Host=localhost;Username=postgres;Password=mysecretpassword;Database=test_database"
 }
 ```
+
+## Add yourself to the database for local development
+
+1. In Script0003_Employees add a row with your name, role, office, email, skills, interests, bio, photo, and callibrity_email
+
+2. In Script0004_Ett_Employee add a row with your first name, last name, employee_number, and employee_email. The employee_email needs to match up with the callibrity_email you added to the employees table
+
+3. In Script0005_Ett_Employee_Metrics add a row with an employee number that matches with the employee_number from the previous step, and nominal values for the rest of the value columns
+
+4. Point connection string in Program.cs to your local db and run the project
+
+--------------------
+
+If you need to add yourself to the production database, you need to add these insert statements into new scripts so that they will run, since DbUp will not run the same scripts against the database more than once
