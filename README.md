@@ -43,3 +43,14 @@ dotnet run
 --------------------
 
 If you need to add yourself to the production database, you need to add these insert statements into new scripts so that they will run, since DbUp will not run the same scripts against the database more than once
+
+## Refresh DB
+
+If you want to clear out the db to be able to run the DbUp script from scratch, connect to the db and run the following SQL commands:
+```
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO public;
+COMMENT ON SCHEMA public IS 'standard public schema';
+```
