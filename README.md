@@ -28,3 +28,12 @@ To use this DB in the API, in the API appsettings.json, alter the connection str
   "Connection": "Host=localhost;Username=postgres;Password=mysecretpassword;Database=test_database"
 }
 ```
+
+If you want to clear out the db to be able to run the DbUp script from scratch, connect to the db and run the following SQL commands:
+```
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO public;
+COMMENT ON SCHEMA public IS 'standard public schema';
+```
